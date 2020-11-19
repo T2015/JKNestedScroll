@@ -91,7 +91,7 @@ extension UIScrollView: UIGestureRecognizerDelegate {
     
     
     /// 顶部可滚动高度
-    var canScrollHeaderHeight: CGFloat {
+    open var canScrollHeaderHeight: CGFloat {
         set{
             let value = NSNumber(value: Int(newValue))
             objc_setAssociatedObject(self, JKPropertyKey.canScrollHeaderHeight, value, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
