@@ -117,7 +117,9 @@ extension UIScrollView: UIGestureRecognizerDelegate {
 
 extension UIScrollViewDelegate {
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        print("scrollViewDidScroll")
         
         let nest = scrollView
         guard let subScroll = nest.subScrollView else {
@@ -160,13 +162,13 @@ extension UIScrollViewDelegate {
     }
     
     
-    func nestScrollViewDidScroll(_ scrollView: UIScrollView) {
-        
+    public func nestScrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("nestScrollViewDidScroll")
     }
     
     
-    func subScrollViewDidScroll(_ scrollView: UIScrollView) {
-        
+    public func subScrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("subScrollViewDidScroll")
         if scrollView.lockOffset == false {
             scrollView.lastOffset = scrollView.contentOffset
         }
